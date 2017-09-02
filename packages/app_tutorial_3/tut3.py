@@ -3,14 +3,14 @@
 #
 import sys
 import ftrobopy                                              # Import the ftrobopy module
-from TxtStyle import *
+from TouchStyle import *
 
-class FtcGuiApplication(TxtApplication):
+class TouchGuiApplication(TouchApplication):
     def __init__(self, args):
-        TxtApplication.__init__(self, args)
+        TouchApplication.__init__(self, args)
 
         # create the empty main window
-        w = TxtWindow("Tut_3e")
+        w = TouchWindow("Tut_3e")
 
         txt_ip = os.environ.get('TXT_IP')                    # try to read TXT_IP environment variable
         if txt_ip == None: txt_ip = "localhost"              # use localhost otherwise
@@ -86,4 +86,4 @@ class FtcGuiApplication(TxtApplication):
                 self.toggle_light()
 
 if __name__ == "__main__":
-    FtcGuiApplication(sys.argv)
+    TouchGuiApplication(sys.argv)
